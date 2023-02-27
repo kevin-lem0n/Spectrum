@@ -3,8 +3,10 @@ function $$(a){return document.querySelector(a);}
 var mySpectrumCode = $$("#mySpectrumCode");
 
 const C_IMG_SIZE = 50;
+const NO_OF_BOXES = 5; // Code to specify how many colored boxes are generated
 
 var isTokenCode = "";
+
 function generateNumberCode(NUMBER_LIMIT){
     mySpectrumCode.innerHTML = "";
     var code = "";
@@ -16,7 +18,7 @@ function generateNumberCode(NUMBER_LIMIT){
     }
     isTokenCode = code;
 }
-generateNumberCode(5);
+generateNumberCode(NO_OF_BOXES);
 
 var verificationCode = $$("#verificationCode");
 var submitBtn = $$("#submitBtn");
@@ -40,7 +42,7 @@ function verifyCode(){
             </span>`; 
             verificationCode.style.border="1px solid red";
             verificationCode.value = "";
-            generateNumberCode(5);
+            generateNumberCode(NO_OF_BOXES);
         }
         if(verificationCode.value.trim() == isTokenCode){
             msg.innerHTML = `
@@ -48,6 +50,7 @@ function verifyCode(){
                 <i class="fa fa-check"></i>
                 Correct code !
             </span>`; 
+            verificationCode.style.border="1px solid green";
             verificationCode.value = "";
         }
     }
