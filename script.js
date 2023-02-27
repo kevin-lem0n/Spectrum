@@ -28,6 +28,7 @@ function verifyCode(){
             <span style="color:red">
                 Please enter code
             </span>`;
+        verificationCode.style.border="1px solid red";
     }
     if(verificationCode.value.trim() != ""){
         msg.innerHTML = ``;
@@ -37,6 +38,7 @@ function verifyCode(){
                 <i class="fa fa-times"></i>
                 Incorrect code !
             </span>`; 
+            verificationCode.style.border="1px solid red";
             verificationCode.value = "";
             generateNumberCode(5);
         }
