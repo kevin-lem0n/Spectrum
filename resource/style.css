@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Inter");
+body{
+    margin: 0;
+    font-family: 'Inter';
+}
+.container{
+    margin-top: 15vh    ;
+}
+#mySpectrumCode{
+    text-align: center;
+}
+.center{
+    display:inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
